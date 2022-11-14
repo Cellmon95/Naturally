@@ -1,3 +1,15 @@
+:root {
+    --apelsin-color: #FF7823;
+    --tall-color: #737664;
+    --gurka-color: #82A686;
+    --cream-de-la-creme: #E4DACB;
+    --sand-color: #AD8B6E;
+    --kaffe-color: #6F584B;
+    --chocklad-color: #3E2D27;
+    --skymning-color: #323232;
+  }
+  
+
 
 html, body{
     margin: 0;
@@ -20,6 +32,11 @@ html, body{
     object-fit: cover;
 }
 
+.images-section {
+    width: 100%;
+    height: 100%;
+}
+
 .images-section{
     margin-top: 4.3rem;
     display: grid;
@@ -32,4 +49,30 @@ html, body{
     grid-column-start: 1;
     width: 100%;
     height: 52.7rem;
+    
+}
+
+.new-collection-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 22.4rem;
+    background-color: #3F3F3F;
+
+}
+
+.new-collection-section p{
+    margin: 3.6rem auto auto auto;
+    order: 0;
+    font-size: 2rem;
+    color: #FDFDFD;
+    width: 70%;
+    text-align: center;
+    font-family: 'Inter';
+}
+
+.explore-now-button{
+    order: 1;
+    margin:  auto;
 }
