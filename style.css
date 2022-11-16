@@ -9,12 +9,12 @@
     --skymning-color: #323232;
   }
   
-
-
 html, body{
     margin: 0;
     font-size: 10px;
 }
+
+/* Hero Section */
 
 .hero-section {
     grid-column-start: 1;
@@ -31,6 +31,8 @@ html, body{
     height: 100%;
     object-fit: cover;
 }
+
+/* Image Section */
 
 .images-section {
     width: 100%;
@@ -51,6 +53,8 @@ html, body{
     height: 52.7rem;
     
 }
+
+/* New Collection Section */
 
 .new-collection-section{
     display: flex;
