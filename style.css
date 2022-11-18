@@ -7,11 +7,33 @@
     --kaffe-color: #6F584B;
     --chocklad-color: #3E2D27;
     --skymning-color: #323232;
-  }
-  
+}
+
+@font-face {
+    font-family: 'Montserrat-b';
+    src: url('Montserrat-Woff/Montserrat-Bold.woff2') format('woff2'),
+        url('Montserrat-Woff/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Montserrat-m';
+    src: url('Montserrat-Woff/Montserrat-Medium.woff2') format('woff2'),
+         url('Montserrat-Woff/Montserrat-Medium.woff') format('woff');
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Montserrat-r';
+    src: url('Montserrat-Woff/Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Woff/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
 html, body{
     margin: 0;
-    font-size: 10px;
+    font-family: 'Montserrat-m';
+    font-size: 16px;
 }
 
 /*Header Section*/
@@ -42,7 +64,7 @@ nav{
     top: 50%;
     left: 50%;
     transform: translate3d(-50%,-50%,0);
-    width: 6rem;
+    width: 4.5rem;
 }
 
 .header-options{
@@ -56,10 +78,10 @@ nav{
 }
 
 .header-options img{
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 
-    margin-left: 2rem;
+    margin-left: 0.5rem;
 }
 
 /* Hero Section */
@@ -99,7 +121,7 @@ nav{
     grid-column-start: 1;
     width: 100%;
     height: 52.7rem;
-    
+
 }
 
 /* New Collection Section */
@@ -129,7 +151,7 @@ nav{
     margin:  auto;
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 768px) {
     /*Header Section*/
     .burger-icon{
         display: none;
@@ -143,10 +165,19 @@ nav{
     nav a{
         text-decoration: none;
         color: black;
-        margin-right: 2rem;
+        margin-right: 1rem;
     }
 
     .header-options p{
         display: contents;
+    }
+
+    .header-options img{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .header-logo{
+        width: 6.5rem;
     }
 }
