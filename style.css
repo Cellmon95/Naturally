@@ -14,6 +14,29 @@ html, body{
     font-size: 10px;
 }
 
+/*Header Section*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 11rem;
+}
+
+.header-logo{
+    width: 6rem;
+}
+
+.header-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-options img{
+    width: 3.4rem;
+    height: 3.4rem;
+}
+
 /* Hero Section */
 
 .hero-section {
