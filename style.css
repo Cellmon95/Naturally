@@ -108,7 +108,7 @@ nav{
     height: 65rem;
     width: 100%;
     grid-gap: 0;
-    background-image: url('/images/austin-wade-98RLHBWGswE-unsplash.png');
+    background-image: url('/images/hero-img.png');
     background-position: -600px;
     background-size: cover;
 }
@@ -121,24 +121,43 @@ nav{
 
 /* Image Section */
 
-.images-section {
+.images-section{
     width: 100%;
     height: 100%;
-}
-
-.images-section{
     margin-top: 4.3rem;
     display: grid;
     grid-template-columns: 1;
     gap: 1.6rem;
 }
 
-.images-section img{
+.white-box{
+    position: absolute;
+    margin: 20px 0 0 0;
+    background-color: white;
+    width: 99px;
+}
+.white-box p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: var(--skymning-color);
+}
+
+.images-section-thumbnail img{
     object-fit: cover;
     grid-column-start: 1;
     width: 100%;
-    height: 52.7rem;
+    height: 596px;
 
+}
+
+#images-section-thumbnail-2 img{
+    object-position: -220px 0px;
+}
+
+.images-section-thumbnail-info p{
+    margin-left: 5%;
 }
 
 /* New Collection Section */
