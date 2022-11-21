@@ -7,11 +7,88 @@
     --kaffe-color: #6F584B;
     --chocklad-color: #3E2D27;
     --skymning-color: #323232;
-  }
-  
+}
+
+@font-face {
+    font-family: 'Montserrat-b';
+    src: url('Montserrat-Woff/Montserrat-Bold.woff2') format('woff2'),
+        url('Montserrat-Woff/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Montserrat-sb';
+    src: url('Montserrat-Woff/Montserrat-SemiBold.woff2') format('woff2'),
+         url('Montserrat-Woff/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Montserrat-m';
+    src: url('Montserrat-Woff/Montserrat-Medium.woff2') format('woff2'),
+         url('Montserrat-Woff/Montserrat-Medium.woff') format('woff');
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Montserrat-r';
+    src: url('Montserrat-Woff/Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Woff/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
 html, body{
     margin: 0;
-    font-size: 10px;
+    font-family: 'Montserrat-m';
+    font-size: 1rem;
+}
+
+/*Header Section*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 11rem;
+    margin: 0 2rem;
+
+    font-size: 1.1rem;
+}
+
+.burger-icon div{
+    width: 38px;
+    height: 4px;
+    margin-bottom: 0.6rem;
+    background-color: black;
+}
+
+nav{
+    display: none;
+}
+
+.header-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 4.5rem;
+}
+
+.header-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-options p{
+    display: none;
+}
+
+.header-options img{
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: 0.5rem;
 }
 
 /* Hero Section */
@@ -51,7 +128,7 @@ html, body{
     grid-column-start: 1;
     width: 100%;
     height: 52.7rem;
-    
+
 }
 
 /* New Collection Section */
@@ -79,4 +156,139 @@ html, body{
 .explore-now-button{
     order: 1;
     margin:  auto;
+}
+
+
+/*Contact Section*/
+.contact-section{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 42rem;
+}
+
+.contact-bg-image img{
+    width: 100vw;
+    height: 42rem;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+.contact-heading{
+    text-align: center;
+    width: 28rem;
+    font-size: 2.6rem;
+    margin-bottom: 8rem;
+}
+
+.contact-heading, .contact-content{
+    z-index: 1;
+}
+
+.contact-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--apelsin-color);
+    width: 100%;
+    height: 11.5rem;
+}
+
+.contact-content p{
+    border-left: 8px solid var(--gurka-color);
+    padding-left: 0.5rem;
+    color: white;
+}
+
+.contact-input-field input, .contact-input-field button{
+    margin-left: 1rem;
+}
+
+.contact-content p{
+    margin-left: 1rem;
+}
+
+.contact-input-field input{
+    width: 11.6rem;
+    padding: 1rem 0rem;
+}
+
+.contact-input-field button{
+    width: 12.4rem;
+    padding: 1rem 0rem;
+    background-color: var(--chocklad-color);
+    color: white;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-input-field button:hover{
+    background-color: var(--kaffe-color);
+}
+
+.contact-input-field button:hover::after{
+    border-left: var(--kaffe-color);
+}
+
+.contact-input-field button::after{
+    content: '';
+    position: absolute;
+    right: -3px;
+    bottom: -4px;
+    width: 0.7rem;
+    height: 0.8rem;
+    margin: -2px;
+    transform: rotate(45deg);
+    background-color: var(--apelsin-color);
+    border-left: 1px solid var(--chocklad-color);
+}
+
+@media screen and (min-width: 768px) {
+    /*Header Section*/
+    .burger-icon{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: black;
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .header-options p{
+        display: contents;
+        font-size: 0.9rem;
+    }
+
+    .header-options img{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .header-logo{
+        width: 6.5rem;
+    }
+}
+
+@media screen and (min-width: 1023px){
+    nav a{
+        font-size: 1.1rem;
+    }
+
+    .header-options p{
+        font-size: 1.1rem;
+    }
 }
