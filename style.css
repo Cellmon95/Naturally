@@ -58,7 +58,7 @@ header{
 .burger-icon div{
     width: 38px;
     height: 4px;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
     background-color: black;
 }
 
@@ -85,9 +85,9 @@ nav{
 }
 
 .header-options img{
-    width: 3rem;
-    height: 3rem;
-
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
     margin-left: 0.5rem;
 }
 
@@ -274,8 +274,8 @@ nav{
     }
 
     .header-options img{
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     .header-logo{
