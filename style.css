@@ -227,6 +227,7 @@ nav{
 .contact-input-field button{
     width: 12.4rem;
     padding: 1rem 0rem;
+    margin-right: 1rem;
     background-color: var(--chocklad-color);
     color: white;
     border: none;
@@ -235,7 +236,7 @@ nav{
 }
 
 .contact-input-field button img{
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 .contact-input-field button:hover{

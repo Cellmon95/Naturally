@@ -3,6 +3,7 @@ const contactInput = contactInputSection.querySelector('input');
 const registerBtn = contactInputSection.querySelector('button');
 const contactContent = document.querySelector('.contact-content')
 const contactErrorField = contactContent.querySelector('.email-error-field');
+const registerBtnImg = registerBtn.querySelector('img');
 
 let errorCreated = false;
 let registered = false;
@@ -29,6 +30,18 @@ registerBtn.addEventListener('click', () =>{
                 contactErrorField.classList.remove('email-error-field-active');
                 contactInput.classList.remove('input-error-active');
             }
+            
+            registerBtn.remove();
+            const img = document.createElement('img');
+            img.src = "images/contact-btn-reg.svg";
+            img.style.marginLeft = "1rem";
+            contactInputSection.style =
+                `
+                display: flex;
+                align-items: center;
+                `
+            contactInputSection.append(img);            
         }
     }
+    contactInput.value = "";
 })
