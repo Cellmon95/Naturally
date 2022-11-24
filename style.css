@@ -7,6 +7,7 @@
     --kaffe-color: #6F584B;
     --chocklad-color: #3E2D27;
     --skymning-color: #323232;
+    --fel-color: #FF0000
 }
 
 @font-face {
@@ -200,7 +201,7 @@ nav{
     height: 11.5rem;
 }
 
-.contact-content p{
+.contact-content-container p{
     border-left: 8px solid var(--gurka-color);
     padding-left: 0.5rem;
     color: white;
@@ -210,13 +211,17 @@ nav{
     margin-left: 1rem;
 }
 
-.contact-content p{
+.contact-content-container p{
     margin-left: 1rem;
 }
 
 .contact-input-field input{
     width: 11.6rem;
     padding: 1rem 0rem;
+}
+
+.input-error-active{
+    border: 2px solid var(--fel-color);
 }
 
 .contact-input-field button{
@@ -227,6 +232,10 @@ nav{
     border: none;
     position: relative;
     cursor: pointer;
+}
+
+.contact-input-field button img{
+    margin-left: 1rem;
 }
 
 .contact-input-field button:hover{
@@ -248,6 +257,27 @@ nav{
     transform: rotate(45deg);
     background-color: var(--apelsin-color);
     border-left: 1px solid var(--chocklad-color);
+}
+
+.email-error-field{
+    display: none;
+}
+
+.email-error-field-active{
+    display: flex;
+    align-items: center;
+    width: 24rem;
+}
+
+.email-error-field img{
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.email-error-field p{
+    font-family: 'Montserrat-r';
+    font-weight: 12px;
+    margin-left: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
