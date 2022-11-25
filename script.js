@@ -1,3 +1,17 @@
+//Burger Menu Section
+const burgerMenu = document.querySelector('.burger-menu');
+const burgerBtn = document.querySelector('.burger-icon');
+const closeMenu = burgerMenu.querySelector('.close-menu');
+
+burgerBtn.addEventListener('click', () =>{
+    burgerMenu.classList.toggle('burger-menu-open');
+})
+
+closeMenu.addEventListener('click', () =>{
+    burgerMenu.classList.toggle('burger-menu-open');
+})
+
+// Contact Section
 const contactInputSection = document.querySelector('.contact-input-field');
 const contactInput = contactInputSection.querySelector('input');
 const registerBtn = contactInputSection.querySelector('button');
