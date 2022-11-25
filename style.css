@@ -196,6 +196,7 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     background-color: var(--apelsin-color);
     width: 100%;
     height: 11.5rem;
@@ -217,7 +218,7 @@ nav{
 
 .contact-input-field input{
     width: 11.6rem;
-    padding: 1rem 0rem;
+    padding: 1rem 0.5rem;
 }
 
 .input-error-active{
@@ -267,18 +268,66 @@ nav{
 .email-error-field-active{
     display: flex;
     align-items: center;
-    width: 24rem;
+    width: 27rem;
+    position: absolute;
+    bottom: 0;
 }
 
-.email-error-field img{
+.email-error-field-active img{
     width: 0.9rem;
     height: 0.9rem;
 }
 
-.email-error-field p{
+.email-error-field-active p{
+    color: white;
     font-family: 'Montserrat-r';
     font-weight: 12px;
-    margin-left: 0.5rem;
+    margin: 0.4rem 0.6rem;
+}
+
+/* Product Delivery Section */
+
+.product-delivery{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    height: 8rem;
+}
+
+.delivery-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.delivery-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 12rem;
+    height: 100%;
+}
+
+.delivery-card h3, .delivery-card p{
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+
+.delivery-card h3{
+    font-family: 'Montserrat-b';
+    font-size: 1rem;
+}
+
+.delivery-card p{
+    font-family: 'Montserrat-r';
+    font-size: 0.75rem;
+}
+
+.delivery-card img{
+    height: 3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -321,5 +370,12 @@ nav{
 
     .header-options p{
         font-size: 1.1rem;
+    }
+
+    .delivery-container{
+        width: 60rem;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
     }
 }
