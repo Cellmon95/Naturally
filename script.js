@@ -13,7 +13,7 @@ const validateEmail = (email) =>{
     )
 }
 
-registerBtn.addEventListener('click', () =>{
+const emailVerify = () =>{
     if(!registered){
         if(validateEmail(contactInput.value) === null){
             contactErrorField.classList.remove('email-error-field');
@@ -40,8 +40,19 @@ registerBtn.addEventListener('click', () =>{
                 display: flex;
                 align-items: center;
                 `
-            contactInputSection.append(img);            
+            contactInputSection.append(img);
+            registered = true;            
         }
     }
     contactInput.value = "";
+}
+
+registerBtn.addEventListener('click', () =>{
+    emailVerify();
+})
+
+contactInput.addEventListener('keydown', (e) =>{
+    if(e.key === 'Enter' && !registered){
+        emailVerify();
+    }
 })
