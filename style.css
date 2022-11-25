@@ -170,6 +170,11 @@ nav{
     height: 42rem;
 }
 
+.contact-section h2{
+    color: white;
+    font-family: 'Montserrat-b';
+}
+
 .contact-bg-image img{
     width: 100vw;
     height: 42rem;
@@ -309,10 +314,17 @@ nav{
     text-align: center;
     width: 12rem;
     height: 100%;
+    cursor: default;
+
+    transition: 2s scale;
+}
+
+.delivery-card:hover{
+    scale: 1.2;
 }
 
 .delivery-card h3, .delivery-card p{
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     margin-bottom: 0;
 }
 
