@@ -168,11 +168,24 @@ nav{
     align-items: center;
     flex-direction: column;
     height: 42rem;
+
+    background-image: url('images/contact-section-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contact-section h2{
     color: white;
     font-family: 'Montserrat-b';
+}
+
+.contact-bg-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
 }
 
 .contact-bg-image img{
@@ -296,7 +309,7 @@ nav{
     display: flex;
     justify-content: center;
     margin: 2rem;
-    height: 8rem;
+    height: 10rem;
 }
 
 .delivery-container{
