@@ -180,6 +180,20 @@ nav{
     font-family: 'Montserrat-b';
 }
 
+.contact-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 28rem;
+    margin-bottom: 2rem;
+}
+
+.contact-text p{
+    display: none;
+    color: white;
+}
+
 .contact-bg-shadow{
     position: absolute;
     width: 100%;
@@ -200,12 +214,10 @@ nav{
 
 .contact-heading{
     text-align: center;
-    width: 28rem;
     font-size: 2.6rem;
-    margin-bottom: 8rem;
 }
 
-.contact-heading, .contact-content{
+.contact-text, .contact-content{
     z-index: 1;
 }
 
@@ -402,5 +414,19 @@ nav{
         justify-content: space-between;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
+    }
+
+    .contact-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        width: 60rem;
+        text-align: center;
+    }
+
+    .contact-text p{
+        display: block;
     }
 }
