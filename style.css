@@ -101,20 +101,19 @@ nav{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    transform: translateX(-100vw);
+    transform: translateX(-150vw);
     top: 0;
     left: 0;
     background-color: var(--cream-de-la-creme);
     z-index: 2;
-    transition: 0.7s transform ease;
+    transition: 0.4s transform ease;
 }
 
 .burger-nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 8rem;
-    height: 13rem;
+    width: 10rem;
     margin-top: 7rem;
     margin-left: 1.5rem;
 }
@@ -127,13 +126,16 @@ nav{
 
 .burger-drop-content{
     overflow: hidden;
+    display: none;
+    max-height: 0;
 }
 
-.burger-nav a{
+.burger-nav a, .burger-drop-down img{
     text-decoration: none;
     color: black;
     font-family: 'Montserrat-b';
     font-size: 1rem;
+    padding-bottom: 1rem;
 }
 
 .close-menu{
@@ -145,6 +147,7 @@ nav{
 
 .burger-menu-open{
     transform: translateX(0);
+
 }
 /* Hero Section */
 
