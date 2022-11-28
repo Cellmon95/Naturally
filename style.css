@@ -44,6 +44,18 @@ html, body{
     font-size: 1rem;
 }
 
+h3{
+    font-family: Montserrat-b;
+    font-size: 32px;
+    color: white;
+}
+
+h2{
+    color: white;
+    font-family: 'Montserrat-r';
+    font-size: 41px;
+}
+
 /*Header Section*/
 header{
     display: flex;
@@ -109,6 +121,10 @@ nav{
     transition: 0.4s transform ease;
 }
 
+.burger-menu-open{
+    transform: translateX(0);
+}
+
 .burger-nav{
     display: flex;
     flex-direction: column;
@@ -124,13 +140,25 @@ nav{
     align-items: center;
 }
 
+.burger-drop-down-open img{
+    transform: translateZ(45deg);
+    transition: transform 2s ease;
+}
+
 .burger-drop-content{
     overflow: hidden;
     display: none;
-    max-height: 0;
+    opacity: 0;
+    display: none;
 }
 
-.burger-nav a, .burger-drop-down img{
+.burger-drop-content-open{
+    display: block;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.burger-nav a{
     text-decoration: none;
     color: black;
     font-family: 'Montserrat-b';
@@ -145,10 +173,7 @@ nav{
     right: 1.5rem;
 }
 
-.burger-menu-open{
-    transform: translateX(0);
 
-}
 /* Hero Section */
 
 .hero-section {
@@ -413,6 +438,7 @@ nav{
 .delivery-card h3{
     font-family: 'Montserrat-b';
     font-size: 1rem;
+    color: black;
 }
 
 .delivery-card p{
