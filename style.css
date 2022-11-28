@@ -7,6 +7,7 @@
     --kaffe-color: #6F584B;
     --chocklad-color: #3E2D27;
     --skymning-color: #323232;
+    --fel-color: #FF0000
 }
 
 @font-face {
@@ -72,10 +73,14 @@ header{
     font-size: 1.1rem;
 }
 
+.burger-icon{
+    cursor: pointer;
+}
+
 .burger-icon div{
     width: 38px;
     height: 4px;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
     background-color: black;
 }
 
@@ -102,12 +107,65 @@ nav{
 }
 
 .header-options img{
-    width: 3rem;
-    height: 3rem;
-
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
     margin-left: 0.5rem;
 }
 
+/* Burger Menu Section */
+.burger-menu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-150vw);
+    top: 0;
+    left: 0;
+    background-color: var(--cream-de-la-creme);
+    z-index: 2;
+    transition: 0.4s transform ease;
+}
+
+.burger-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 10rem;
+    margin-top: 7rem;
+    margin-left: 1.5rem;
+}
+
+.burger-drop-down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger-drop-content{
+    overflow: hidden;
+    display: none;
+    max-height: 0;
+}
+
+.burger-nav a, .burger-drop-down img{
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat-b';
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+.close-menu{
+    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    right: 1.5rem;
+}
+
+.burger-menu-open{
+    transform: translateX(0);
+
+}
 /* Hero Section */
 
 .hero-section {
@@ -274,6 +332,38 @@ nav{
     align-items: center;
     flex-direction: column;
     height: 42rem;
+
+    background-image: url('images/contact-section-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-section h2{
+    color: white;
+    font-family: 'Montserrat-b';
+}
+
+.contact-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 28rem;
+    margin-bottom: 2rem;
+}
+
+.contact-text p{
+    display: none;
+    color: white;
+}
+
+.contact-bg-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
 }
 
 .contact-bg-image img{
@@ -288,12 +378,10 @@ nav{
 
 .contact-heading{
     text-align: center;
-    width: 28rem;
     font-size: 2.6rem;
-    margin-bottom: 8rem;
 }
 
-.contact-heading, .contact-content{
+.contact-text, .contact-content{
     z-index: 1;
 }
 
@@ -302,12 +390,13 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     background-color: var(--apelsin-color);
     width: 100%;
     height: 11.5rem;
 }
 
-.contact-content p{
+.contact-content-container p{
     border-left: 8px solid var(--gurka-color);
     padding-left: 0.5rem;
     color: white;
@@ -317,23 +406,32 @@ nav{
     margin-left: 1rem;
 }
 
-.contact-content p{
+.contact-content-container p{
     margin-left: 1rem;
 }
 
 .contact-input-field input{
     width: 11.6rem;
-    padding: 1rem 0rem;
+    padding: 1rem 0.5rem;
+}
+
+.input-error-active{
+    border: 2px solid var(--fel-color);
 }
 
 .contact-input-field button{
     width: 12.4rem;
     padding: 1rem 0rem;
+    margin-right: 1rem;
     background-color: var(--chocklad-color);
     color: white;
     border: none;
     position: relative;
     cursor: pointer;
+}
+
+.contact-input-field button img{
+    margin-left: 1.5rem;
 }
 
 .contact-input-field button:hover{
@@ -355,6 +453,82 @@ nav{
     transform: rotate(45deg);
     background-color: var(--apelsin-color);
     border-left: 1px solid var(--chocklad-color);
+}
+
+.email-error-field{
+    display: none;
+}
+
+.email-error-field-active{
+    display: flex;
+    align-items: center;
+    width: 27rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.email-error-field-active img{
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.email-error-field-active p{
+    color: white;
+    font-family: 'Montserrat-r';
+    font-weight: 12px;
+    margin: 0.4rem 0.6rem;
+}
+
+/* Product Delivery Section */
+
+.product-delivery{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    height: 10rem;
+}
+
+.delivery-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.delivery-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 12rem;
+    height: 100%;
+    cursor: default;
+
+    transition: 2s scale;
+}
+
+.delivery-card:hover{
+    scale: 1.2;
+}
+
+.delivery-card h3, .delivery-card p{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.delivery-card h3{
+    font-family: 'Montserrat-b';
+    font-size: 1rem;
+}
+
+.delivery-card p{
+    font-family: 'Montserrat-r';
+    font-size: 0.75rem;
+}
+
+.delivery-card img{
+    height: 3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -381,8 +555,8 @@ nav{
     }
 
     .header-options img{
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     .header-logo{
@@ -397,5 +571,26 @@ nav{
 
     .header-options p{
         font-size: 1.1rem;
+    }
+
+    .delivery-container{
+        width: 60rem;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .contact-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        width: 60rem;
+        text-align: center;
+    }
+
+    .contact-text p{
+        display: block;
     }
 }

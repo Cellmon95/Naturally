@@ -12,11 +12,40 @@
 </head>
 <body>
     <header>
+        <aside class="burger-menu">
+            <img src="images/close.svg" alt="" class="close-menu">
+            <div class="burger-nav">
+                <a href="">Nyheter</a>
+                <a href="">Topplosta</a>
+                <div class="burger-drop-down">
+                    <a href="">Kläder</a> 
+                    <img src="images/smallArrowBlack.svg" alt="">
+                </div>
+                <ul class="burger-drop-content">
+                    <li><a href="">T-Shirt</a></li>
+                    <li><a href="">Långärmat</a></li>
+                    <li><a href="">Byxor</a></li>
+                </ul>
+                <div class="burger-drop-down">
+                    <a href="">Accessoarer</a>
+                    <img src="images/smallArrowBlack.svg" alt="">
+                </div>
+                <ul class="burger-drop-content">
+                    <li><a href="">Ringar</a></li>
+                    <li><a href="">Halsband</a></li>
+                    <li><a href="">Klockor</a></li>
+                </ul>
+                
+                <a href="">SE/SEK</a>
+            </div>
+        </aside>
+
         <div class="burger-icon">
             <div></div>
             <div></div>
             <div></div>
         </div>
+
         <nav>
             <a href="">Nyheter</a>
             <a href="">Topplista</a>
@@ -26,8 +55,8 @@
         <img src="images/Naturally-Logo.svg" alt="Naturally logo" class="header-logo">
         <div class="header-options">
             <p>SE/SEK</p>
-            <img src="images/Search-scope.svg" alt="Search scope icon">
-            <img src="images/Shopping-bag.svg" alt="Shopping bag icon">
+            <img src="images/searchScope.svg" alt="Search scope icon">
+            <img src="images/ShoppingBag.svg" alt="Shopping bag icon">
         </div>
     </header>
     <section class="hero-section">
@@ -144,12 +173,17 @@
     </section>
     
     <section class="contact-section">
+        <div class="contact-bg-shadow"></div>
         <div class="contact-bg-image">
             <img src="images/image-6.png" alt="">
         </div>
-        <h2 class="contact-heading">Köp så att det är hållbart för framtiden.</h2>
+        <div class="contact-text">
+            <h2 class="contact-heading">Köp så att det är hållbart för framtiden.</h2>
+            <p>Vi vill ju tänka på framtiden så innehållet är helt ekologiskt, så klart, och vi testar 
+                inget på djur eller andra konstigheter. Allt är ju naturligt. Precis som hela vårt sortiment.</p>
+        </div>
         <article class="contact-content">
-            <div>
+            <div class="contact-content-container">
             <p>
                 BLI MEDLEM OCH FÅ 20% 
                 <br>
@@ -157,11 +191,41 @@
             </p>
             <div class="contact-input-field">
                 <input type="text" placeholder="Ange din e-postadress...">
-                <button>REGISTRERA ></button>
+                <button>REGISTRERA<img src="images/smallArrow.svg" alt=""></button>
             </div>
-        </div>
+            </div>
+            <div class="email-error-field">
+                <img src="images/error.svg" alt="">
+                <p>Något blev fel, försök igen.</p>
+            </div>
         </article>
     </section>
+
+    <section class="product-delivery">
+        <div class="delivery-container">
+            <div class="delivery-card">
+                <img src="images/shipping-box.svg" alt="">
+                <h3>skickas GRATIS och med kärlek</h3>
+                <p>på ordrar över 600kr</p>
+            </div>
+            <div class="delivery-card">
+                <img src="images/heart.svg" alt="">
+                <h3>Varsamt levererat inom 1-3 dagar</h3>
+                <p>och förpackad med kärlek</p>
+            </div>
+            <div class="delivery-card">
+                <img src="images/wallet.svg" alt="">
+                <h3>Köp nu, och betala senare</h3>
+                <p>med klarna</p>
+            </div>
+            <div class="delivery-card">
+                <img src="images/contrast-ok-hand.svg" alt="">
+                <h3>Njut av ditt gröna köp</h3>
+                <p>från oss på Naturally</p>
+            </div>
+        </div>
+    </section>
     <footer></footer>
+    <script src="script.js"></script>
 </body>
 </html>
