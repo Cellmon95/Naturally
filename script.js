@@ -2,6 +2,20 @@
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerBtn = document.querySelector('.burger-icon');
 const closeMenu = burgerMenu.querySelector('.close-menu');
+const accordionItems = burgerMenu.querySelectorAll('.burger-accordion-container');
+const accordionClothing = document.getElementById('accordion-clothing');
+const accordionAccessories = document.getElementById('accordion-accessories');
+const accordionCountry = document.getElementById('accordion-country');
+
+let accordionItemIndex = 0;
+
+accordionItems.forEach(accordion => {
+    if(accordionItemIndex === 0){
+        accordionClothing.addEventListener('click', () =>{
+            accordion.classList.toggle('burger-accordion-open');
+        })
+    }
+});
 
 burgerBtn.addEventListener('click', () =>{
     burgerMenu.classList.toggle('burger-menu-open');

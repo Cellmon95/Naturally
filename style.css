@@ -80,7 +80,7 @@ header{
     width: 38px;
     height: 4px;
     margin-bottom: 0.4rem;
-    background-color: black;
+    background-color: var(--skymning-color);
 }
 
 nav{
@@ -129,47 +129,6 @@ nav{
     transform: translateX(0);
 }
 
-.burger-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 10rem;
-    margin-top: 7rem;
-    margin-left: 1.5rem;
-}
-
-.burger-drop-down{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.burger-drop-down-open img{
-    transform: translateZ(45deg);
-    transition: transform 2s ease;
-}
-
-.burger-drop-content{
-    overflow: hidden;
-    display: none;
-    opacity: 0;
-    display: none;
-}
-
-.burger-drop-content-open{
-    display: block;
-    opacity: 1;
-    transition: opacity 2s ease;
-}
-
-.burger-nav a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Montserrat-b';
-    font-size: 1rem;
-    padding-bottom: 1rem;
-}
-
 .close-menu{
     position: absolute;
     cursor: pointer;
@@ -177,6 +136,64 @@ nav{
     right: 1.5rem;
 }
 
+.burger-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.burger-nav h3{
+    font-family: 'Montserrat-b';
+    font-size: 1rem;
+    color: var(--skymning-color);
+    padding-left: 1rem;
+}
+
+.burger-accordion-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+}
+
+.burger-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-bottom: 1px solid var(--skymning-color);
+    cursor: pointer;
+}
+
+.burger-heading img{
+    padding-right: 1rem;
+}
+
+.burger-content{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.burger-content div{
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.burger-content-open{
+    max-height: 5rem;
+}
+
+.burger-content-open div{
+    display: block;
+}
 
 /* Hero Section */
 
@@ -349,6 +366,10 @@ nav{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.contact-content label{
+    padding-left: 1rem;
 }
 
 .contact-section h2{

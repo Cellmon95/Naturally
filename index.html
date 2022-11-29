@@ -14,30 +14,56 @@
     <header>
         <aside class="burger-menu">
             <img src="images/close.svg" alt="" class="close-menu">
-            <div class="burger-nav">
-                <a href="">Nyheter</a>
-                <a href="">Topplosta</a>
-                <div class="burger-drop-down">
-                    <a href="">Kläder</a> 
-                    <img src="images/smallArrowBlack.svg" alt="">
+            <section class="burger-nav">
+
+                <div class="burger-accordion-container">
+                    <div class="burger-heading">
+                        <h3>TOPPLISTA</h3>
+                    </div>
                 </div>
-                <ul class="burger-drop-content">
-                    <li><a href="">T-Shirt</a></li>
-                    <li><a href="">Långärmat</a></li>
-                    <li><a href="">Byxor</a></li>
-                </ul>
-                <div class="burger-drop-down">
-                    <a href="">Accessoarer</a>
-                    <img src="images/smallArrowBlack.svg" alt="">
+                <div class="burger-accordion-container">
+                    <div class="burger-heading">
+                        <h3>KLÄDER</h3>
+                        <img src="images/smallArrowBlack.svg" alt="">
+                    </div>
+                    <div class="burger-content" id="accordion-clothing">
+                        <div>
+                            <a>T-Shirt</a>
+                            <a>Långärmat</a>
+                            <a>Byxor</a>
+                        </div>
+                    </div>
                 </div>
-                <ul class="burger-drop-content">
-                    <li><a href="">Ringar</a></li>
-                    <li><a href="">Halsband</a></li>
-                    <li><a href="">Klockor</a></li>
-                </ul>
+
+                <div class="burger-accordion-container">
+                    <div class="burger-heading">
+                        <h3>ACCESSOARER</h3>
+                        <img src="images/smallArrowBlack.svg" alt="">
+                    </div>
+                    <div class="burger-content" id="accordion-accessories">
+                        <div>
+                            <a>Ringar</a>
+                            <a>Halsband</a>
+                            <a>Klockor</a>
+                            <a>Väskor</a>
+                        </div>
+                    </div>
+                </div>
                 
-                <a href="">SE/SEK</a>
-            </div>
+                <div class="burger-accordion-container">
+                    <div class="burger-heading">
+                        <h3>SE/SEK</h3>
+                        <img src="images/smallArrowBlack.svg" alt="">
+                    </div>
+                    <div class="burger-content" id="accordion-country">
+                        <div>
+                            <a>United Kingdom/GBP</a>
+                            <a>Norge/NOK</a>
+                            <a>Danmark/DKK</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </aside>
 
         <div class="burger-icon">
@@ -175,7 +201,7 @@
     <section class="contact-section">
         <div class="contact-bg-shadow"></div>
         <div class="contact-bg-image">
-            <img src="images/image-6.png" alt="">
+            <img src="images/contact-section-bg.png" alt="">
         </div>
         <div class="contact-text">
             <h2 class="contact-heading">Köp så att det är hållbart för framtiden.</h2>
@@ -189,8 +215,9 @@
                 <br>
                 RABATT PÅ DITT FÖRSTA KÖP!
             </p>
+            <label for="email-field">Ange din e-postaddress</label>
             <div class="contact-input-field">
-                <input type="text" placeholder="Ange din e-postadress...">
+                <input type="text" name="email-field" placeholder="Ange din e-postadress...">
                 <button>REGISTRERA<img src="images/smallArrow.svg" alt=""></button>
             </div>
             </div>
