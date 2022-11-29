@@ -154,7 +154,6 @@ nav{
 .burger-accordion-container{
     display: flex;
     flex-direction: column;
-
     width: 90%;
 }
 
@@ -169,7 +168,12 @@ nav{
 }
 
 .burger-heading img{
-    padding-right: 1rem;
+    transform: rotateZ(90deg);
+    transition: transform 0.5s ease;
+}
+
+.burger-heading-open img{
+    transform: rotateZ(-90deg);
 }
 
 .burger-content{
@@ -179,20 +183,18 @@ nav{
     width: 100%;
     max-height: 0;
     transition: max-height 0.5s ease;
+    overflow: hidden;
 }
 
 .burger-content div{
-    display: none;
+    display: flex;
     flex-direction: column;
-    padding: 2rem;
+    justify-content: space-around;
+    height: 10rem;
 }
 
 .burger-content-open{
-    max-height: 5rem;
-}
-
-.burger-content-open div{
-    display: block;
+    max-height: 10rem;
 }
 
 /* Hero Section */

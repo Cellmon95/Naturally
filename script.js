@@ -3,17 +3,41 @@ const burgerMenu = document.querySelector('.burger-menu');
 const burgerBtn = document.querySelector('.burger-icon');
 const closeMenu = burgerMenu.querySelector('.close-menu');
 const accordionItems = burgerMenu.querySelectorAll('.burger-accordion-container');
+
 const accordionClothing = document.getElementById('accordion-clothing');
 const accordionAccessories = document.getElementById('accordion-accessories');
 const accordionCountry = document.getElementById('accordion-country');
 
+const accordionClothingImg = document.getElementById('accordion-clothing-img');
+const accordionAccessoriesImg = document.getElementById('accordion-accessoarer-img');
+const accordionCountryImg = document.getElementById('accordion-country-img');
+
 let accordionItemIndex = 0;
 
 accordionItems.forEach(accordion => {
-    if(accordionItemIndex === 0){
-        accordionClothing.addEventListener('click', () =>{
-            accordion.classList.toggle('burger-accordion-open');
+    if(accordionItemIndex === 1){
+        accordion.addEventListener('click', () =>{
+            accordionClothing.classList.toggle('burger-content-open');
+            accordionClothingImg.classList.toggle('burger-heading-open');
+        });
+    }
+    else if(accordionItemIndex === 2){
+        accordion.addEventListener('click', () =>{
+            accordionAccessories.classList.toggle('burger-content-open');
+            accordionAccessoriesImg.classList.toggle('burger-heading-open');
         })
+    }
+    else if(accordionItemIndex === 3){
+        accordion.addEventListener('click', () =>{
+            accordionCountry.classList.toggle('burger-content-open');
+            accordionCountryImg.classList.toggle('burger-heading-open');
+        })
+    }
+
+    accordionItemIndex++;
+
+    if(accordionItemIndex === 4){
+        accordionItemIndex = 0;
     }
 });
 
