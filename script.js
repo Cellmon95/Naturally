@@ -1,3 +1,23 @@
+//Header Drop Down Section
+const headerClothingbtn = document.getElementById('clothing-btn');
+const headerCountrybtn = document.getElementById('country-btn');
+const headerDropSection = document.querySelector('.header-drop-down');
+const headerDropContainer = headerDropSection.querySelector('.header-drop-container');
+const headerClothingDrop = headerDropContainer.querySelector('.header-clothing');
+const headerCountryDrop = headerDropContainer.querySelector('.header-country');
+
+let isClothingActive = false;
+let isCountryActive = false;
+
+headerClothingbtn.addEventListener('click', () =>{
+    headerDropContainer.classList.toggle('header-drop-container-open');
+    headerClothingDrop.classList.toggle('header-clothing-open');
+})
+
+headerCountrybtn.addEventListener('click', () =>{
+    headerDropContainer.classList.toggle('header-drop-container-open');
+    headerCountryDrop.classList.toggle('header-country-open');
+})
 //Burger Menu Section
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerBtn = document.querySelector('.burger-icon');
