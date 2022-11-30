@@ -5,20 +5,45 @@ const headerDropSection = document.querySelector('.header-drop-down');
 const headerDropContainer = headerDropSection.querySelector('.header-drop-container');
 const headerClothingDrop = headerDropContainer.querySelector('.header-clothing');
 const headerCountryDrop = headerDropContainer.querySelector('.header-country');
+const disableHeader = document.querySelector('.disable-header');
 
-let isClothingActive = false;
+let isHeaderDisabled = false;
+let isClothesActive = false;
 let isCountryActive = false;
-let isheaderDropContainerActive = false;
+
+const headerDisableToggle = () =>{
+    disableHeader.classList.toggle('disable-header-active');
+}
+
+disableHeader.addEventListener('click', () =>{
+    if(isClothesActive){
+        headerClothingDrop.classList.toggle('header-clothing-open');
+        isClothesActive = false;
+    }
+
+    if(isCountryActive){
+        headerCountryDrop.classList.toggle('header-country-open');
+        isCountryActive = false;
+    }
+
+    headerDropContainer.classList.toggle('header-drop-container-open');
+    headerDisableToggle();
+})
 
 headerClothingbtn.addEventListener('click', () =>{
     headerClothingDrop.classList.toggle('header-clothing-open');
     headerDropContainer.classList.toggle('header-drop-container-open');
+    headerDisableToggle();
+    isClothesActive = true;
 })
 
 headerCountrybtn.addEventListener('click', () =>{
     headerCountryDrop.classList.toggle('header-country-open');
     headerDropContainer.classList.toggle('header-drop-container-open');
+    headerDisableToggle();
+    isCountryActive = true;
 })
+
 //Burger Menu Section
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerBtn = document.querySelector('.burger-icon');
