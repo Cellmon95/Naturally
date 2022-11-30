@@ -1,15 +1,18 @@
 //Header Drop Down Section
 const headerClothingbtn = document.getElementById('clothing-btn');
 const headerCountrybtn = document.getElementById('country-btn');
+const headerAccessoriesbtn = document.getElementById('accessoarer-btn');
 const headerDropSection = document.querySelector('.header-drop-down');
 const headerDropContainer = headerDropSection.querySelector('.header-drop-container');
 const headerClothingDrop = headerDropContainer.querySelector('.header-clothing');
 const headerCountryDrop = headerDropContainer.querySelector('.header-country');
+const headerAccessoriesDrop = headerDropContainer.querySelector('.header-accessories');
 const disableHeader = document.querySelector('.disable-header');
 
 let isHeaderDisabled = false;
 let isClothesActive = false;
 let isCountryActive = false;
+let isAccessoriesActive = false;
 
 const headerDisableToggle = () =>{
     disableHeader.classList.toggle('disable-header-active');
@@ -24,6 +27,11 @@ disableHeader.addEventListener('click', () =>{
     if(isCountryActive){
         headerCountryDrop.classList.toggle('header-country-open');
         isCountryActive = false;
+    }
+
+    if(isAccessoriesActive){
+        headerAccessoriesDrop.classList.toggle('header-accessories-open');
+        isAccessoriesActive = false;
     }
 
     headerDropContainer.classList.toggle('header-drop-container-open');
@@ -44,6 +52,13 @@ headerCountrybtn.addEventListener('click', () =>{
     isCountryActive = true;
 })
 
+headerAccessoriesbtn.addEventListener('click', () =>{
+    headerAccessoriesDrop.classList.toggle('header-accessories-open');
+    headerDropContainer.classList.toggle('header-drop-container-open');
+    headerDisableToggle();
+    isAccessoriesActive = true;
+})
+
 //Burger Menu Section
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerBtn = document.querySelector('.burger-icon');
@@ -61,19 +76,19 @@ const accordionCountryImg = document.getElementById('accordion-country-img');
 let accordionItemIndex = 0;
 
 accordionItems.forEach(accordion => {
-    if(accordionItemIndex === 1){
+    if(accordionItemIndex === 2){
         accordion.addEventListener('click', () =>{
             accordionClothing.classList.toggle('burger-content-open');
             accordionClothingImg.classList.toggle('burger-heading-open');
         });
     }
-    else if(accordionItemIndex === 2){
+    else if(accordionItemIndex === 3){
         accordion.addEventListener('click', () =>{
             accordionAccessories.classList.toggle('burger-content-open');
             accordionAccessoriesImg.classList.toggle('burger-heading-open');
         })
     }
-    else if(accordionItemIndex === 3){
+    else if(accordionItemIndex === 4){
         accordion.addEventListener('click', () =>{
             accordionCountry.classList.toggle('burger-content-open');
             accordionCountryImg.classList.toggle('burger-heading-open');

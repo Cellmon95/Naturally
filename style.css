@@ -203,6 +203,33 @@ nav a:hover{
     margin: 0;
 }
 
+.header-accessories{
+    display: none;
+    height: 12rem;
+}
+
+.header-accessories h3{
+    color: var(--skymning-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.header-accessories a{
+    font-family: 'Montserrat-r';
+    font-size: 1rem;
+}
+
+.header-accessories a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.header-accessories-open{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .header-country{
     display: none;
     justify-content: space-around;
