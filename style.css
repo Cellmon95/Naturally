@@ -641,7 +641,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     margin: 2rem;
-    height: 10rem;
+    height: 100%;
 }
 
 .delivery-container{
@@ -688,6 +688,60 @@ nav a:hover{
     height: 3rem;
 }
 
+
+/* Footer Bottom Section*/
+.footer-bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--cream-de-la-creme);
+    padding-bottom: 1rem;
+}
+
+.footer-bottom-container h4{
+    font-family: 'Montserrat-b';
+    font-size: 1rem;
+}
+
+.footer-bottom-container p{
+    font-family: 'Montserrat-r';
+    font-size: 1rem;
+}
+
+.footer-bottom-container div{
+    text-align: center;
+}
+
+.footer-logo{
+    display: none;
+}
+
+.follow-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 17rem;
+}
+
+.follow-icons img{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.payment-icons{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--skymning-color);
+    border-radius: 0.4rem;
+    width: auto;
+}
+
+.payment-icons img{
+    padding: 0.4rem 0.6rem;
+    width: 3.8rem;
+    height: 2.37rem;
+}
+
 @media screen and (min-width: 768px) {
     /*Header Section*/
     .burger-icon{
@@ -722,6 +776,7 @@ nav a:hover{
 }
 
 @media screen and (min-width: 1023px){
+    /*Header Section*/
     nav a{
         font-size: 1.1rem;
     }
@@ -730,6 +785,7 @@ nav a:hover{
         font-size: 1.1rem;
     }
 
+    /*Delivery Section*/
     .delivery-container{
         width: 60rem;
         justify-content: space-between;
@@ -737,6 +793,7 @@ nav a:hover{
         grid-template-rows: 1fr;
     }
 
+    /*Contact Section*/
     .contact-text{
         display: flex;
         justify-content: center;
@@ -749,5 +806,20 @@ nav a:hover{
 
     .contact-text p{
         display: block;
+    }
+
+    /*Footer Bottom Section*/
+    .footer-bottom-container{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer-bottom-container div{
+        scale: 0.9;
+    }
+
+    .footer-logo{
+        display: block;
+        width: 9.75rem;
     }
 }
