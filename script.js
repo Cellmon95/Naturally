@@ -8,15 +8,16 @@ const headerCountryDrop = headerDropContainer.querySelector('.header-country');
 
 let isClothingActive = false;
 let isCountryActive = false;
+let isheaderDropContainerActive = false;
 
 headerClothingbtn.addEventListener('click', () =>{
-    headerDropContainer.classList.toggle('header-drop-container-open');
     headerClothingDrop.classList.toggle('header-clothing-open');
+    headerDropContainer.classList.toggle('header-drop-container-open');
 })
 
 headerCountrybtn.addEventListener('click', () =>{
-    headerDropContainer.classList.toggle('header-drop-container-open');
     headerCountryDrop.classList.toggle('header-country-open');
+    headerDropContainer.classList.toggle('header-drop-container-open');
 })
 //Burger Menu Section
 const burgerMenu = document.querySelector('.burger-menu');

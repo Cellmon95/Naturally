@@ -90,6 +90,10 @@ nav a{
     cursor: pointer;
 }
 
+nav a:hover{
+    text-decoration: underline;
+}
+
 .header-logo{
     position: absolute;
     top: 50%;
@@ -104,8 +108,13 @@ nav a{
     align-items: center;
 }
 
-.header-options p{
+.header-options a{
     display: none;
+    cursor: pointer;
+}
+
+.header-options a:hover{
+    text-decoration: underline;
 }
 
 .header-options img{
@@ -135,7 +144,7 @@ nav a{
     width: 100vw;
     height: 17.75rem;
     background-color: var(--cream-de-la-creme);
-    transition: 0.5s transform ease;
+    transition: 0.5s transform ease-in;
 }
 
 .header-drop-container-open{
@@ -166,8 +175,9 @@ nav a{
     height: 12rem;
 }
 
-.clothing-left a, .clothing-right a{
+.clothing-left a:hover, .clothing-right a:hover{
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .clothing-left h3, .clothing-right h3{
@@ -183,6 +193,11 @@ nav a{
     position: absolute;
     right: 1rem;
     height: 8.75rem;
+}
+
+.header-country a:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .header-country-open{
@@ -489,8 +504,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 28rem;
+    width: 80%;
     margin-bottom: 2rem;
 }
 
@@ -504,7 +518,7 @@ nav a{
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .contact-bg-image img{
@@ -520,6 +534,7 @@ nav a{
 .contact-heading{
     text-align: center;
     font-size: 2.6rem;
+    letter-spacing: 3px;
 }
 
 .contact-text, .contact-content{
@@ -617,7 +632,7 @@ nav a{
     color: white;
     font-family: 'Montserrat-r';
     font-weight: 12px;
-    margin: 0.4rem 0.6rem;
+    margin: 0;
 }
 
 /* Product Delivery Section */
@@ -691,8 +706,8 @@ nav a{
         font-size: 0.9rem;
     }
 
-    .header-options p{
-        display: contents;
+    .header-options a{
+        display: block;
         font-size: 0.9rem;
     }
 
@@ -711,7 +726,7 @@ nav a{
         font-size: 1.1rem;
     }
 
-    .header-options p{
+    .header-options a{
         font-size: 1.1rem;
     }
 
@@ -728,7 +743,7 @@ nav a{
         align-items: center;
         flex-direction: column;
         margin-bottom: 4rem;
-        width: 60rem;
+        width: 80%;
         text-align: center;
     }
 
