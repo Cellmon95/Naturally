@@ -291,6 +291,10 @@ nav a:hover{
     cursor: pointer;
 }
 
+.burger-content a:hover{
+    text-decoration: underline;
+}
+
 .burger-content-open{
     max-height: 10rem;
 }
@@ -485,7 +489,7 @@ nav a:hover{
     flex-direction: column;
     height: 42rem;
 
-    background-image: url('images/contact-section-bg.png');
+    background-image: url('images/bag-img.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -519,16 +523,6 @@ nav a:hover{
     height: 100%;
     background-color: black;
     opacity: 0.4;
-}
-
-.contact-bg-image img{
-    width: 100vw;
-    height: 42rem;
-    position: absolute;
-    object-fit: cover;
-    z-index: -1;
-    left: 0;
-    top: 0;
 }
 
 .contact-heading{
