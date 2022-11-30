@@ -160,7 +160,7 @@ nav a:hover{
     width: 100vw;
     height: 17.75rem;
     background-color: var(--cream-de-la-creme);
-    transition: 0.5s transform ease-in;
+    transition: 0.3s transform ease-in;
 }
 
 .header-drop-container-open{
@@ -169,6 +169,11 @@ nav a:hover{
 
 .header-clothing{
     display: none;
+}
+
+.header-clothing a{
+    font-family: 'Montserrat-r';
+    font-size: 1rem;
 }
 
 .header-clothing-open{
