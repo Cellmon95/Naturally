@@ -49,6 +49,29 @@ html, body{
     font-size: 1rem;
 }
 
+h1{
+    font-family: 'Montserrat-b';
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    width: 200px;
+    font-size: 16px;
+    color: white;
+}
+
+@media (min-width:480px) {
+    h1{
+        font-family: 'Montserrat-b';
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        width: 200px;
+        font-size: 64px;
+        color: white;
+    }
+}
+
+
 h3{
     font-family: 'Montserrat-b';
     font-size: 32px;
@@ -452,21 +475,13 @@ nav a:hover{
 }
 
 /* Hero Section */
-
-.hero-section {
-    grid-column-start: 1;
-    height: 65rem;
-    width: 100%;
-    grid-gap: 0;
-    background-image: url('/images/hero-img.png');
-    background-position: -600px;
-    background-size: cover;
+.hero-section{
+    position: relative;
 }
 
-.hero-section img{
+.hero-section video{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 /* Image Section */
@@ -507,7 +522,6 @@ nav a:hover{
 }
 
 #images-section-thumbnail-2 img{
-    object-position: -220px 0px;
 }
 
 #images-section-thumbnail-3{
@@ -533,9 +547,9 @@ nav a:hover{
     
 }
 
-@media (min-width:1281px) {
+@media (min-width:1280px) {
     .images-section{
-        grid-template-columns: 20% 1fr 1fr 1fr 20%;
+        grid-template-columns: 5% 1fr 1fr 1fr 5%;
     }
 
     #images-section-thumbnail-1{
@@ -607,10 +621,7 @@ nav a:hover{
 
 #collection-section-img1{
     grid-column-start: 1;
-}
-
-#collection-section-img2{
-    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .collection-section h2{
@@ -629,13 +640,24 @@ nav a:hover{
 .collection-section .explore-now-button{
     margin-top: 40px;
 }
-
 .collection-section .explore-now-button{
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 75%;
     transform: translate(-50%, -50%);
 }
+
+
+@media (min-width: 480px) {
+    .collection-section .explore-now-button{
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
 
 
 /*Contact Section*/
@@ -986,12 +1008,20 @@ nav a:hover{
 /* Footer Top */
 
 .footer-top{
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    padding: 100px;
-    background-color: var(--footer-background);
+    display: none;
 }
+
+@media screen and (min-width: 768px) {
+.footer-top{
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        padding: 100px;
+        background-color: var(--footer-background);
+    }
+}
+
+
 .footer-top ul{
     list-style: none;
     padding: 0;
@@ -1042,4 +1072,56 @@ nav a:hover{
     order: 1;
     display: flex;
     flex-direction: row;
+}
+
+
+/*Footer Bottom Section*/
+.footer-bottom-container{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-bottom-container div{
+    scale: 0.9;
+}
+
+.footer-logo{
+    display: block;
+    width: 9.75rem;
+}
+
+/*Footer Top Mobile */
+
+.hide{
+    display: none;
+}
+
+.footer-top-mobile{
+    background-color: var(--footer-background);
+    margin: 0;
+}
+
+.footer-top-mobile ul{
+    list-style: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-top-mobile-hamburger-item{
+    border-top: solid #323232 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-top-mobile-hamburger-item:nth-last-child(1){
+    border-bottom: solid #323232 1px;
+}
+
+.footer-top-hamburger-item-link-list{
+    background-color: white;
+}
+
+.footer-top-hamburger-item-arrow{
+
 }
