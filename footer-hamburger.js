@@ -1,8 +1,10 @@
-const hamburgerItemAbout = document.querySelector('.footer-top-mobile-hamburger-item-about');
+const footerTopMobileHamburger = document.querySelectorAll('.footer-top-mobile-hamburger > li');
 
-hamburgerItemAbout.addEventListener('click', onClick(a) );
+footerTopMobileHamburger.forEach(item => {
+    item.addEventListener('click', onClick );
+});
+console.log(footerTopMobileHamburger);
 
-function onClick(a){
-    hamburgerItemAbout.classList.toggle('.hide');
-    console.log('click')
+function onClick(e){
+    e.currentTarget.querySelector('ul').classList.toggle('hide');
 };
