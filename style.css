@@ -1078,6 +1078,7 @@ nav a:hover{
 
 .hide{
     display: none;
+    visibility: hidden;
 }
 
 .footer-top-mobile{
@@ -1096,6 +1097,7 @@ nav a:hover{
     border-top: solid #323232 1px;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: .5s;
 }
 
 .footer-top-mobile-hamburger-item:nth-last-child(1){
@@ -1109,3 +1111,9 @@ nav a:hover{
 .footer-top-hamburger-item-arrow{
 
 }
+
+.burger-nav-footer{
+    background-color: var(--footer-background);
+    width: 100%;
+}
+
