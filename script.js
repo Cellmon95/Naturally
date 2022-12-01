@@ -1,3 +1,24 @@
+//Pop-Up Section
+const popUp = document.querySelector('.pop-up');
+const disableBg = document.querySelector('.pop-up-bg-disable');
+const registerPopUpBtn = document.querySelector('.register-pop-up-btn')
+const closePopUpBtn = document.querySelector('.close-pop-up');
+registerPopUpBtn.addEventListener('click', () =>{
+    popUp.classList.remove('pop-up-active');
+    disableBg.classList.remove('pop-up-bg-disable-active');
+})
+
+closePopUpBtn.addEventListener('click', () =>{
+    popUp.classList.remove('pop-up-active');
+    disableBg.classList.remove('pop-up-bg-disable-active');
+})
+
+setTimeout(() => {
+    popUp.classList.add('pop-up-active');
+    disableBg.classList.add('pop-up-bg-disable-active');
+    
+}, 10000);
+
 //Header Drop Down Section
 const headerClothingbtn = document.getElementById('clothing-btn');
 const headerCountrybtn = document.getElementById('country-btn');
@@ -97,7 +118,7 @@ accordionItems.forEach(accordion => {
 
     accordionItemIndex++;
 
-    if(accordionItemIndex === 4){
+    if(accordionItemIndex === 5){
         accordionItemIndex = 0;
     }
 });
