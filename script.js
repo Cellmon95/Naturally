@@ -3,9 +3,14 @@ const popUp = document.querySelector('.pop-up');
 const disableBg = document.querySelector('.pop-up-bg-disable');
 const registerPopUpBtn = document.querySelector('.register-pop-up-btn')
 const closePopUpBtn = document.querySelector('.close-pop-up');
+
 registerPopUpBtn.addEventListener('click', () =>{
     popUp.classList.remove('pop-up-active');
     disableBg.classList.remove('pop-up-bg-disable-active');
+    window.scrollTo({
+        top: 4480,
+        behavior: 'smooth',
+    })
 })
 
 closePopUpBtn.addEventListener('click', () =>{

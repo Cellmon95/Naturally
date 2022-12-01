@@ -116,6 +116,10 @@ h4{
     font-size: 1.5rem;
 }
 
+.pop-up-text img{
+    cursor: pointer;
+}
+
 .pop-up-img img{
     height: 100%;
 }
@@ -405,6 +409,7 @@ nav a:hover{
     font-family: 'Montserrat-r';
     font-size: 1rem;
     cursor: pointer;
+    text-decoration: none
 }
 
 .burger-content a:hover{
@@ -745,11 +750,11 @@ nav a:hover{
     content: '';
     position: absolute;
     right: -3px;
-    bottom: -4px;
+    bottom: -3px;
     width: 0.7rem;
-    height: 0.8rem;
+    height: 0.9rem;
     margin: -2px;
-    transform: rotate(45deg);
+    transform: rotate(41deg);
     background-color: var(--apelsin-color);
     border-left: 1px solid var(--chocklad-color);
 }
