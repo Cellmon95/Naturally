@@ -49,6 +49,16 @@ html, body{
     font-size: 1rem;
 }
 
+h1{
+    font-family: 'Montserrat-b';
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 200px;
+    font-size: 64px;
+    color: white;
+}
+
 h3{
     font-family: 'Montserrat-b';
     font-size: 32px;
@@ -377,15 +387,13 @@ nav a:hover{
 }
 
 /* Hero Section */
+.hero-section{
+    position: relative;
+}
 
-.hero-section {
-    grid-column-start: 1;
-    height: 65rem;
+.hero-section video{
     width: 100%;
-    grid-gap: 0;
-    background-image: url('/images/hero-img.png');
-    background-position: -600px;
-    background-size: cover;
+    height: 100%;
 }
 
 .hero-section img{
@@ -432,7 +440,6 @@ nav a:hover{
 }
 
 #images-section-thumbnail-2 img{
-    object-position: -220px 0px;
 }
 
 #images-section-thumbnail-3{
@@ -458,7 +465,7 @@ nav a:hover{
     
 }
 
-@media (min-width:1281px) {
+@media (min-width:1280px) {
     .images-section{
         grid-template-columns: 20% 1fr 1fr 1fr 20%;
     }
@@ -532,10 +539,7 @@ nav a:hover{
 
 #collection-section-img1{
     grid-column-start: 1;
-}
-
-#collection-section-img2{
-    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .collection-section h2{
@@ -961,3 +965,16 @@ nav a:hover{
     display: block;
     width: 9.75rem;
 }
+
+/*Footer Top Mobile */
+
+.hide{
+    display: none;
+}
+
+.footer-top-mobile ul{
+    list-style: none;
+    cursor: pointer;
+}
+
+
