@@ -792,10 +792,8 @@ nav a:hover{
 .email-error-field-active{
     display: flex;
     align-items: center;
-    width: 27rem;
-    position: absolute;
-    bottom: 0;
-    padding-left: 3rem;
+    width: 15rem;
+    margin-left: 1rem;
 }
 
 .email-error-field-active img{
@@ -808,6 +806,7 @@ nav a:hover{
     font-family: 'Montserrat-r';
     font-weight: 12px;
     margin: 0;
+    border: none;
 }
 
 /* Product Delivery Section */
