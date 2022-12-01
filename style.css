@@ -792,7 +792,7 @@ nav a:hover{
 .email-error-field-active{
     display: flex;
     align-items: center;
-    width: 15rem;
+    width: 20rem;
     margin-left: 1rem;
 }
 
