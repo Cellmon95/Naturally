@@ -741,7 +741,7 @@ nav a:hover{
 }
 
 .contact-input-field input{
-    width: 11.6rem;
+    width: 10rem;
     padding: 1rem 0.5rem;
 }
 
@@ -750,7 +750,7 @@ nav a:hover{
 }
 
 .contact-input-field button{
-    width: 12.4rem;
+    width: 11rem;
     padding: 1rem 0rem;
     margin-right: 1rem;
     background-color: var(--chocklad-color);
@@ -795,6 +795,7 @@ nav a:hover{
     width: 27rem;
     position: absolute;
     bottom: 0;
+    padding-left: 3rem;
 }
 
 .email-error-field-active img{
@@ -1072,22 +1073,6 @@ nav a:hover{
     order: 1;
     display: flex;
     flex-direction: row;
-}
-
-
-/*Footer Bottom Section*/
-.footer-bottom-container{
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.footer-bottom-container div{
-    scale: 0.9;
-}
-
-.footer-logo{
-    display: block;
-    width: 9.75rem;
 }
 
 /*Footer Top Mobile */
