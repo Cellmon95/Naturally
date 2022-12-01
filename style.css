@@ -1137,6 +1137,13 @@ footer{
     margin: 0;
 }
 
+@media screen and (min-width: 480px) {
+    .footer-top-mobile{ 
+        display: none;
+    }    
+}
+
+
 .footer-top-accordion-container{
     display: flex;
     flex-direction: column;
