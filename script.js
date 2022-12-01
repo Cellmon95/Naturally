@@ -14,11 +14,11 @@ closePopUpBtn.addEventListener('click', () =>{
     disableBg.classList.remove('pop-up-bg-disable-active');
 })
 
-setTimeout(() => {
+/*setTimeout(() => {
     popUp.classList.add('pop-up-active');
     disableBg.classList.add('pop-up-bg-disable-active');
     
-}, 10000);
+}, 10000);*/
 
 //Header Drop Down Section
 const headerClothingbtn = document.getElementById('clothing-btn');
