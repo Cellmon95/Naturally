@@ -315,6 +315,10 @@ nav a:hover{
     height: 8.75rem;
 }
 
+.header-country a{
+    text-decoration: none;
+}
+
 .header-country a:hover{
     cursor: pointer;
     text-decoration: underline;
